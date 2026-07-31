@@ -33,25 +33,41 @@ The initial reference implementation is being built on top of **[Goose](https://
 
 Alternative harness foundations will be documented as the project evolves, in case community needs outgrow the current choice.
 
-## Repository structure (planned)
+## Repository structure
 
 ```
 .
-├── skills/              # Platform engineering skill definitions (the domain knowledge itself)
-├── adapters/            # Integration adapters for external systems
-│   ├── kubernetes/      # Reference adapter for Kubernetes
-│   └── backstage/       # Reference adapter for Backstage
-├── scenarios/           # Scenario library for testing and demonstration
-├── docs/                # Architecture notes, wiki-style reference material
-└── CONTRIBUTING.md
+├── .agents/skills/      # Focused project-level Goose skills
+├── adapters/            # Integration capability and safety contracts
+│   └── kubernetes/      # Kubernetes reference adapter contract
+├── docs/                # Architecture and setup documentation
+├── recipes/             # Reusable Goose harness recipes
+├── scenarios/           # Reproducible tasks, fixtures, and scoring rubrics
+├── scripts/             # Repository validation
+└── AGENTS.md             # Project-wide context and safety boundaries
 ```
+
+See [`docs/architecture.md`](docs/architecture.md) for the v0 context layers and [`docs/getting-started.md`](docs/getting-started.md) for setup and usage.
+
+## Quick start
+
+With Goose installed and a provider configured:
+
+```sh
+./scripts/validate.sh
+goose run --recipe recipes/platform-engineering/recipe.yaml --explain
+```
+
+In an interactive Goose session, enter `/skills` to confirm the five project skills are discoverable.
+
+The first reusable evaluation task is in [`scenarios/kubernetes-secure-service/`](scenarios/kubernetes-secure-service/). The Kubernetes adapter currently defines a read-first integration contract; it does not yet bundle an MCP server or cluster credentials.
 
 ## Deliverables for the initial release
 
-- [ ] Initial harness implementation, built on Goose
-- [ ] At least 5 platform engineering skill definitions
-- [ ] Reference integration adapters for **Kubernetes**
-- [ ] A documented scenario library that the wider research community can reuse
+- [x] Initial harness implementation, built on Goose
+- [x] At least 5 platform engineering skill definitions
+- [ ] Reference integration adapter for **Kubernetes** (v0 capability and safety contract is defined; executable MCP integration remains)
+- [x] A documented scenario library that the wider research community can reuse
 
 ## Target task categories
 

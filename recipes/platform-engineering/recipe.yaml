@@ -1,0 +1,30 @@
+version: "1.0.0"
+title: "Platform Engineering Harness"
+description: "Run a platform-engineering task with repository conventions, focused skills, explicit verification, and safe infrastructure boundaries."
+instructions: |
+  Work as a platform engineer in the current repository.
+
+  Follow AGENTS.md as the project-wide contract. Inspect existing artifacts before editing. Load only the relevant project skill from .agents/skills. Distinguish facts, assumptions, and recommendations. Default external-system access to read-only, never expose secrets, and require explicit authorization before infrastructure mutation.
+
+  Finish with the changed artifacts, validation evidence, unresolved risks, and recovery guidance when applicable.
+prompt: |
+  Perform this task:
+
+  {{ task }}
+
+  Additional context: {{ project_context }}
+parameters:
+  - key: task
+    input_type: string
+    requirement: required
+    description: "The platform-engineering task to perform"
+  - key: project_context
+    input_type: string
+    requirement: optional
+    default: "Use the repository's documented conventions; ask before inventing organization-specific requirements."
+    description: "Optional constraints, environment details, or organization-specific conventions"
+activities:
+  - "Review a Kubernetes workload against the repository security baseline"
+  - "Assess whether a service follows its documented golden path"
+  - "Triage an incident using evidence and reversible next steps"
+  - "Review a Backstage catalog entity for completeness"

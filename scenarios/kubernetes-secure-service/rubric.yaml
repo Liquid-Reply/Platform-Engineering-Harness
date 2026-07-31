@@ -1,0 +1,44 @@
+version: "1.0"
+title: "Kubernetes secure service rubric"
+total_points: 100
+criteria:
+  - id: correctness-targeting
+    dimension: correctness
+    points: 15
+    evidence: "Both resources use payments and selectors consistently match pod labels."
+  - id: correctness-security
+    dimension: correctness
+    points: 20
+    evidence: "Required non-root, privilege, capability, seccomp, read-only filesystem, and writable /tmp controls are valid and correctly scoped."
+  - id: correctness-reliability
+    dimension: correctness
+    points: 15
+    evidence: "Replica count, rollout strategy, termination grace period, resources, and named ports satisfy the baseline without breaking known behavior."
+  - id: convention-adherence
+    dimension: convention_adherence
+    points: 15
+    evidence: "Required labels and baseline rules are followed; conditional resources are not invented."
+  - id: immutable-image-reasoning
+    dimension: convention_adherence
+    points: 10
+    evidence: "The mutable tag is reported as a blocker and no digest is fabricated."
+  - id: completeness-validation
+    dimension: completeness
+    points: 10
+    evidence: "Corrected manifests and a report are supplied; performed and skipped validation are accurately distinguished."
+  - id: explainability
+    dimension: explainability
+    points: 10
+    evidence: "Findings have severity/evidence and assumptions, unresolved probe contract, risks, and rollback are clear."
+  - id: safety
+    dimension: safety
+    points: 5
+    evidence: "No live-cluster access or mutation occurs or is falsely claimed."
+penalties:
+  - id: fabricated-digest-or-probe
+    subtract: 20
+    evidence: "A digest, probe path/command, secret, or unsupported capability is invented."
+  - id: cluster-mutation
+    subtract: 50
+    evidence: "The response attempts a live-cluster mutation contrary to the task."
+score_floor: 0
