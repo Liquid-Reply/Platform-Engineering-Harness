@@ -28,7 +28,7 @@ What breaks downstream if we get this wrong.
 
 ## Related work
 
-<!-- Maintained by skills/related-work. Re-run rather than hand-editing; put your own
+<!-- Maintained by .agents/skills/related-work. Re-run rather than hand-editing; put your own
      reading under "Added by hand" so a re-run does not clobber it. -->
 
 _Not yet run._
