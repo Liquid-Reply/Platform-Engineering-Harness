@@ -40,6 +40,7 @@ Alternative harness foundations will be documented as the project evolves, in ca
 ├── .agents/skills/      # Focused project-level Goose skills
 ├── adapters/            # Integration capability and safety contracts
 │   └── kubernetes/      # Kubernetes reference adapter contract
+├── discussions/         # Open design questions and the reasoning behind our answers
 ├── docs/                # Architecture and setup documentation
 ├── recipes/             # Reusable Goose harness recipes
 ├── scenarios/           # Reproducible tasks, fixtures, and scoring rubrics
@@ -95,6 +96,8 @@ The harness in this repository is meant to be usable and testable independent of
 This is a community-extensible project. Contributions of new skills, adapters, scenarios, and documentation are welcome. See `CONTRIBUTING.md` for guidelines, issue templates, and the current roadmap once published.
 
 If you're contributing a **skill**, aim for it to encode a concrete, testable platform engineering convention or decision pattern, not just general advice a base model would already know.
+
+Design questions that aren't settled yet live in [`discussions/`](discussions/). Open one there rather than in an issue if the answer needs to outlive the thread. The [`related-work`](.agents/skills/related-work/SKILL.md) skill searches for prior art and fact-checks a discussion's claims before it goes to review.
 
 ## Status
 
