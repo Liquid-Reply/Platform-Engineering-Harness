@@ -1,6 +1,6 @@
-# Community Baseline
+# Kubernetes Community Baseline
 
-A fallback for the case where an organization has supplied no golden path. It is not this project's policy and carries no organizational authority.
+A fallback for the case where an organization has supplied no golden path for Kubernetes workloads. It is not this project's policy and carries no organizational authority.
 
 Rules taken from here must be labeled in output as an external community recommendation, with the standard named. An unlabeled recommendation is indistinguishable from an invented organizational policy, which `AGENTS.md` prohibits.
 

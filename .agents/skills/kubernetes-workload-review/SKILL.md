@@ -12,7 +12,7 @@ Use this skill for Kubernetes YAML generation or review. It supplies Kubernetes 
 The organization's golden path is the only source of workload policy. Use `golden-path-review` to convert it into a checklist before judging any manifest.
 
 - Where a baseline, policy, or template exists, every requirement cited must come from it, by requirement ID.
-- Where none exists, say so explicitly, then draw on `docs/community-baseline.md` and label each item as an external community recommendation. Never present one as an organizational requirement.
+- Where none exists, say so explicitly, then draw on `docs/community-baselines/kubernetes.md` and label each item as an external community recommendation. Never present one as an organizational requirement.
 - Never infer a rule from what other manifests in the repository happen to do without naming that as the source and its strength.
 
 ## Workflow
