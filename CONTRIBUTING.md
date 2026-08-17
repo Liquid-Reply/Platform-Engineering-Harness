@@ -110,5 +110,23 @@ Enhancement suggestions are tracked as [GitHub issues](https://github.com/Liquid
 - You may want to **include screenshots or screen recordings** which help you demonstrate the steps or point out the part which the suggestion is related to. You can use [LICEcap](https://www.cockos.com/licecap/) to record GIFs on macOS and Windows, and the built-in [screen recorder in GNOME](https://help.gnome.org/users/gnome-help/stable/screen-shot-record.html.en) or [SimpleScreenRecorder](https://github.com/MaartenBaert/ssr) on Linux. <!-- this should only be included if the project has a GUI -->
 - **Explain why this enhancement would be useful** to most Platform Engineering Harness users. You may also want to point out the other projects that solved it better and which could serve as inspiration.
 
+## Styleguides
+
+### Writing
+
+- Be brief. Information density over completeness. Cut any sentence that restates the heading.
+- Be frank. State the weakness of an approach directly; don't hedge it into neutrality.
+- No rule of three. Give two reasons if there are two, four if there are four. Padding a list to a rhythm is a tell that the third item was invented.
+- Itemize when the content is genuinely a list. Prose otherwise; bullets are not a substitute for a claim.
+- No em dashes.
+- Cite a source and a date for load-bearing factual claims. Tooling claims in this space go stale within a quarter.
+
+### Commit Messages
+
+- Prefix every commit with its type: `feat:`, `fix:`, `chore:`, `docs:`, `refactor:`. Add a scope where it helps: `feat(skills): add related-work`.
+- Split by type. A change that adds a skill, reformats a README and bumps a dependency is three commits, not one. Mixed commits are unreviewable and unrevertable.
+- Imperative subject. Body only if the *why* isn't obvious from the diff.
+- Do not sign off as an agent. No `Co-Authored-By` trailers for models, no generated-with footers. The human running the agent is the author. Same for PR descriptions.
+
 ## Attribution
 This guide is based on the [contributing.md](https://contributing.md/generator)!
