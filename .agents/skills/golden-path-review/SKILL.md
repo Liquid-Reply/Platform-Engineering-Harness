@@ -7,6 +7,8 @@ description: Compare a service or proposed platform change with an explicitly do
 
 Use this skill only when a repository, portal, template, or user provides a golden-path contract.
 
+This skill supplies the rules. Technology skills supply the mechanics of inspecting an artifact and verifying it, and consume the checklist produced here. For Kubernetes manifests, pair it with `kubernetes-workload-review`. The two compose; they are not alternatives.
+
 ## Workflow
 
 1. Locate and list the governing sources. Do not invent a golden path from generic best practices.

@@ -31,6 +31,13 @@ Goose + enabled tools     execution, inspection, and validation
 
 Skills are stored in the standard project-level `.agents/skills/<name>/SKILL.md` layout. Each skill should encode a focused and testable workflow. Large reference material belongs in supporting files or `docs/`, not in the always-loaded project instructions.
 
+Skills separate rules from mechanics, and the two compose rather than compete:
+
+- **Rule skills** convert an organization's documented contract into a checklist. `golden-path-review` is the general engine.
+- **Technology skills** supply the mechanics of inspecting and verifying one kind of artifact, and consume that checklist. `kubernetes-workload-review` is the reference example.
+
+A technology skill must not carry its own workload policy. Doing so creates a second source of truth that can silently contradict the organization's baseline, and it makes evaluation scores depend on which skill the runtime happened to load. Where no golden path exists, the matching file under `docs/community-baselines/` names external standards to fall back on, and every finding drawn from it is labeled as an external recommendation rather than an organizational requirement.
+
 ### Adapters
 
 Adapters expose external platform capabilities through MCP-compatible tools. The v0 Kubernetes contract starts read-only and separates observation, diffing, and mutation. The contract is implementation-neutral so different Kubernetes MCP servers can be evaluated against the same safety expectations.
