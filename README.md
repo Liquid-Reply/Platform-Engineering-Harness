@@ -48,7 +48,7 @@ Alternative harness foundations will be documented as the project evolves, in ca
 └── AGENTS.md             # Project-wide context and safety boundaries
 ```
 
-See [`docs/architecture.md`](docs/architecture.md) for the v0 context layers and [`docs/getting-started.md`](docs/getting-started.md) for setup and usage.
+See [`docs/architecture.md`](docs/architecture.md) for the v0 context layers and [`docs/getting-started.md`](docs/getting-started.md) for setup. [`docs/usage.md`](docs/usage.md) covers day-to-day interaction.
 
 ## Quick start
 
